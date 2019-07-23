@@ -1,15 +1,17 @@
-package com.example.swoosh
+package com.example.swoosh.Controller
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import com.example.swoosh.Model.Player
+import com.example.swoosh.R
+import com.example.swoosh.Utilities.Extra_Player
 import kotlinx.android.synthetic.main.activity_league.*
 
 class LeagueActivity : BaseActivity() {
 
-    var selectedLeague = ""
+    var player = Player("", "")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -17,9 +19,9 @@ class LeagueActivity : BaseActivity() {
     }
 
     fun leagueNextClicked(view: View) {
-        if (selectedLeague!= "") {
+        if (player.league != "") {
         val skillActivity = Intent(this, SkillActivity::class.java)
-            skillActivity.putExtra(Extra_League, selectedLeague)
+            skillActivity.putExtra(Extra_Player, player)
         startActivity(skillActivity)
     }
         else {
@@ -37,7 +39,7 @@ class LeagueActivity : BaseActivity() {
         womensLeaguebtn.isChecked = false
         coedLeagueBtn.isChecked = false
 
-        selectedLeague = "mens"
+        player.league = "mens"
 
     }
 
@@ -45,7 +47,7 @@ class LeagueActivity : BaseActivity() {
         mensLeagueBtn.isChecked = false
         coedLeagueBtn.isChecked = false
 
-        selectedLeague = "womens"
+        player.league = "womens"
 
     }
 
@@ -53,7 +55,7 @@ class LeagueActivity : BaseActivity() {
         mensLeagueBtn.isChecked = false
         womensLeaguebtn.isChecked = false
 
-        selectedLeague = "co-ed"
+        player.league = "co-ed"
 
     }
 }

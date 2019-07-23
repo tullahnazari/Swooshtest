@@ -5,7 +5,7 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".SkillActivity">
+        tools:context=".Controller.SkillActivity">
 
     <ImageView
             android:layout_width="0dp"
@@ -33,26 +33,6 @@
             app:layout_constraintTop_toBottomOf="@+id/imageView2" android:layout_marginEnd="8dp"
             app:layout_constraintEnd_toEndOf="parent" android:layout_marginStart="8dp"
             app:layout_constraintStart_toStartOf="parent"/>
-    <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
-            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
-            android:layout_marginTop="32dp" app:layout_constraintTop_toBottomOf="@+id/textView5">
-        <ToggleButton
-                android:text="@string/beginner"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent" android:id="@+id/toggleButton5" android:layout_weight="1"
-                android:background="@drawable/swoosh_toggle" android:textColor="#ffffff" android:textOff="@string/beginner"
-                android:layout_marginRight="16dp" android:textOn="@string/beginner" android:fontFamily="@font/arbutus_slab"/>
-        <ToggleButton
-                android:text="@string/baller"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" android:id="@+id/toggleButton4" android:layout_weight="1"
-                android:background="@drawable/swoosh_toggle" android:textColor="#ffffff" android:textOff="@string/baller"
-                android:textOn="@string/baller" android:fontFamily="@font/arbutus_slab"/>
-    </LinearLayout>
     <Button
             android:text="Finish"
             android:layout_width="0dp"
@@ -61,9 +41,34 @@
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginEnd="8dp" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="8dp" android:textColor="@color/colorAccent"
-            android:background="@drawable/swoosh_toggle" android:fontFamily="@font/arbutus_slab"/>
+            android:background="@drawable/swoosh_toggle" android:fontFamily="@font/arbutus_slab"
+            android:onClick="onFinishClick"/>
     <androidx.constraintlayout.widget.Guideline android:layout_width="wrap_content" android:layout_height="wrap_content"
                                                 android:id="@+id/guideline2"
                                                 android:orientation="vertical"
                                                 app:layout_constraintGuide_percent="0.5"/>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="395dp"
+            android:layout_height="56dp" app:layout_constraintTop_toBottomOf="@+id/textView5"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="16dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp">
+        <ToggleButton
+                android:text="@string/beginner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/beginnerBtn" android:layout_weight="1"
+                android:onClick="onBeginnerClick" android:background="@drawable/swoosh_toggle"
+                android:textColor="#ffffff" android:textOff="@string/beginner" android:textOn="@string/beginner"
+                android:layout_marginRight="16dp" android:hapticFeedbackEnabled="true"
+                android:fontFamily="@font/arbutus_slab"/>
+        <ToggleButton
+                android:text="@string/baller"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/ballerBtn" android:layout_weight="1"
+                android:onClick="onBallerClick" android:textColor="#ffffff"
+                android:background="@drawable/swoosh_toggle" android:textOff="@string/baller"
+                android:textOn="@string/baller" android:hapticFeedbackEnabled="true"
+                android:fontFamily="@font/arbutus_slab"/>
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
