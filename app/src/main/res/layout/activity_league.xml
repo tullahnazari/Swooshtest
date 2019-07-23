@@ -41,22 +41,22 @@
             android:layout_marginStart="8dp" android:layout_marginTop="48dp">
         <ToggleButton
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" android:id="@+id/toggleButton2" android:textColor="#ffffff"
+                android:layout_height="wrap_content" android:id="@+id/mensLeagueBtn" android:textColor="#ffffff"
                 android:background="@drawable/swoosh_toggle" android:fontFamily="@font/arbutus_slab"
-                android:textOff="mens" android:textOn="mens"/>
+                android:textOff="mens" android:textOn="mens" android:onClick="onMensClicked"/>
         <ToggleButton
                 android:text="ToggleButton"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" android:id="@+id/toggleButton3" android:textColor="#ffffff"
+                android:layout_height="match_parent" android:id="@+id/womensLeaguebtn" android:textColor="#ffffff"
                 android:background="@drawable/swoosh_toggle" android:fontFamily="@font/arbutus_slab"
                 android:layout_marginTop="24dp" android:layout_marginBottom="24dp" android:textOff="womens"
-                android:textOn="womens"/>
+                android:textOn="womens" android:onClick="onWomensClicked"/>
         <ToggleButton
                 android:text="ToggleButton"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" android:id="@+id/toggleButton" android:textColor="#ffffff"
+                android:layout_height="wrap_content" android:id="@+id/coedLeagueBtn" android:textColor="#ffffff"
                 android:background="@drawable/swoosh_toggle" android:fontFamily="@font/arbutus_slab"
-                android:textOff="co_ed" android:textOn="co_ed"/>
+                android:textOff="co-ed" android:textOn="co-ed" android:onClick="onCoedClicked"/>
     </LinearLayout>
     <Button
             android:text="NEXT"
