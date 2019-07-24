@@ -38,5 +38,7 @@
             android:id="@+id/progressBar2"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="84dp"
             app:layout_constraintTop_toBottomOf="@+id/searchLeagueText" android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toBottomOf="@+id/imageView5" app:layout_constraintVertical_bias="0.158"/>
+            app:layout_constraintBottom_toBottomOf="@+id/imageView5" app:layout_constraintVertical_bias="0.166"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            app:layout_constraintHorizontal_bias="0.012"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
